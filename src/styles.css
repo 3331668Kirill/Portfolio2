@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html,
+body,
+#root {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body {
+    color: white;
+    user-select: none;
+}
+
+div {
+    position: inherit;
+}
+
+.nav {
+    background-color: #191920;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.a:hover {
+    transform: scale(1.2);
+}
+
+.a {
+    margin: 15px;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    color: white;
+}
+
+.underlay {
+    position: absolute;
+    margin-bottom: 10px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    font-family: 'Calibri';
+    font-size: 3em;
+    line-height: 0.74em;
+    color: #f8f8f6;
+
+}
+
+@media screen  and (max-width: 540px) {
+    #root {
+        width: auto;
+    }
+    .nav {
+        width: auto;
+    }
+    .main {
+
+        -webkit-transform: rotate(
+                90deg
+        );
+    }
+    canvas {
+
+        -webkit-transform: scale(.85);
+    }
+}
