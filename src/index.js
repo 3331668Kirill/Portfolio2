@@ -7,7 +7,7 @@ import img from './assets/img/photo26.png'
 import about from './assets/img/about.png'
 import skill from './assets/img/skill.png'
 import Underlay from './Underlay'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {HashRouter, Route, Routes } from 'react-router-dom'
 import Projects from './Projects/Projects'
 import Contacts from './Contacts/Contacts'
 
@@ -20,16 +20,16 @@ const images = [
 ]
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <Suspense fallback={null}>
       <Underlay />
       <Routes>
         <Route path='home' element={<App images={images} />} />
-        <Route path='Portfolio' element={<App images={images} />} />
+        <Route path='Portfolio2' element={<App images={images} />} />
         <Route path='/' element={<App images={images} />} />
         <Route path='projects' element={<Projects />} />
         <Route path='contacts' element={<Contacts />} />
       </Routes>
     </Suspense>
-  </BrowserRouter>
+  </HashRouter>
 )
